@@ -6,13 +6,16 @@
     "@craco/craco": "^7.0.0-alpha.0",
     "@csstools/normalize.css": "^12.1.1",
     "craco": "^0.0.3",
+    "pdfjs-dist": "^4.0.379",
     "prop-types": "15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
+    "react-modal": "^3.16.1",
     "react-pdf": "^7.7.0",
     "react-router-dom": "^5.3.4",
-    "sanitize.css": "^13.0.0"
+    "sanitize.css": "^13.0.0",
+    "worker-loader": "^3.0.8"
   },
   "scripts": {
     "start": "react-scripts start",

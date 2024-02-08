@@ -16,6 +16,19 @@
     color: #333;
     height:100vh;
 }
+.hospital-card-list{
+    display: inline-block;
+    width: 100%;
+    background-color: #FFFFFF;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+
+}
+.hospital-card-list span{
+    margin:30px;
+}
 #navbar {
     width: 10%;
     height: 100%;
@@ -242,3 +255,58 @@ a {
 .session p {
     font-size: 20px;
 }
+/*Call Button*/
+.fixed-tel {
+    position: relative;
+    top:-17px;
+  
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    z-index: 9999;
+    text-align: center;
+  }
+  
+  .fixed-tel:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: #ff5f13;
+    position: absolute;
+    border-radius: 100%;
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, .12), 0 1px 1px 0 rgba(0, 0, 0, .24);
+    top: 0;
+    left: 0;
+
+  
+ 
+    background:  url(https://i.imgur.com/J9AXAq7.png) no-repeat center center;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    opacity: .7;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    background-color: #FF992C;
+    background-size: 70%;
+  -webkit-animation: pulse 01s infinite;
+  }
+  
+  .fixed-tel i {
+    vertical-align: middle;
+    z-index: 2;
+    position: relative;
+    color: #030f27;
+    font-size: 1.5rem;
+  }
+ 
+
