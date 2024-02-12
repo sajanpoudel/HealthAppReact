@@ -22,8 +22,8 @@ function Hospital() {
     };
 
     const loadPdf = async () => {
-        GlobalWorkerOptions.workerSrc = pdfjsWorker;
-        const loadingTask = getDocument('https://andonovicmilica.files.wordpress.com/2018/07/short-stories-for-children.pdf');
+        pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
+        const loadingTask = pdfjs.getDocument('https://andonovicmilica.files.wordpress.com/2018/07/short-stories-for-children.pdf');
         const pdf = await loadingTask.promise;
         const page = await pdf.getPage(1); // or another page
         const viewport = page.getViewport({ scale: 1 });
@@ -56,7 +56,7 @@ function Hospital() {
                         <span id="doctor-name" name="doctor-name">Dr. Sajan Poudel</span>
                         <button id="report-view" name="report-view" onClick={openModal}>View Report</button>
                         <span id="call-now" name="call-now">
-                            <a class="fixed-tel" href="tel:+8548222xxx" target="_blank" title="Call Now"></a>
+                            <a className="fixed-tel" href="tel:+8548222xxx" target="_blank" title="Call Now"></a>
                         </span>
                     </div>
 
