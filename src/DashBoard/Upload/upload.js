@@ -28,9 +28,13 @@ const Upload = () => {
     };
 
     const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        if (!file) {
+            return; // the file picker was cancelled
+        }
         setFormData({
             ...formData,
-            report: URL.createObjectURL(e.target.files[0])
+            report: URL.createObjectURL(file)
         });
     };
 
