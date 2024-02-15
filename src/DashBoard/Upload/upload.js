@@ -6,6 +6,16 @@ import ProfileImg from '../images/profile.jpeg';
 import NavBar from '../components/navbar';
 import RightProfileBar from '../components/RightProfileBar';
 
+// The text inputs of the form, rendered in this order.
+const TEXT_FIELDS = [
+    {label: 'Patient Name', name: 'patientName', type: 'text', placeholder: 'Name of the patient'},
+    {label: 'Patient Email', name: 'patientEmail', type: 'email', placeholder: 'Email Address of the patient'},
+    {label: 'Patient Phone Number', name: 'patientPhoneNumber', type: 'tel', placeholder: 'Patient Phone Number'},
+    {label: 'Doctor Name', name: 'doctorName', type: 'text', placeholder: 'Name of the doctor who evaluated your health report '},
+    {label: 'Doctor Phone Number', name: 'doctorPhoneNumber', type: 'tel', placeholder: 'Doctor Contact Number '},
+    {label: 'Hospital Name', name: 'hospitalName', type: 'text', placeholder: 'Name of the Hospital who performed treatment'},
+];
+
 const Upload = () => {
     const [formData, setFormData] = useState({
         patientName: '',
@@ -59,60 +69,17 @@ const Upload = () => {
                 <div className="form-field">
                     <form onSubmit={handleSubmit}
                         className="form">
-                        <label>
-                            Patient Name
-                            <input type="text" name="patientName" placeholder="Name of the patient"
-                                value={
-                                    formData.patientName
-                                }
-                                onChange={handleChange}
-                                className="input"/>
-                        </label>
-                        <label>
-                            Patient Email
-                            <input type="email" name="patientEmail" placeholder="Email Address of the patient"
-                                value={
-                                    formData.patientEmail
-                                }
-                                onChange={handleChange}
-                                className="input"/>
-                        </label>
-                        <label>
-                            Patient Phone Number
-                            <input type="tel" name="patientPhoneNumber" placeholder="Patient Phone Number"
-                                value={
-                                    formData.patientPhoneNumber
-                                }
-                                onChange={handleChange}
-                                className="input"/>
-                        </label>
-                        <label>
-                            Doctor Name
-                            <input type="text" name="doctorName" placeholder="Name of the doctor who evaluated your health report "
-                                value={
-                                    formData.doctorName
-                                }
-                                onChange={handleChange}
-                                className="input"/>
-                        </label>
-                        <label>
-                            Doctor Phone Number
-                            <input type="tel" name="doctorPhoneNumber" placeholder="Doctor Contact Number "
-                                value={
-                                    formData.doctorPhoneNumber
-                                }
-                                onChange={handleChange}
-                                className="input"/>
-                        </label>
-                        <label>
-                            Hospital Name
-                            <input type="text" name="hospitalName" placeholder="Name of the Hospital who performed treatment"
-                                value={
-                                    formData.hospitalName
-                                }
-                                onChange={handleChange}
-                                className="input"/>
-                        </label>
+                        {
+                        TEXT_FIELDS.map(({label, name, type, placeholder}) => (
+                            <label key={name}>
+                                {label}
+                                <input type={type} name={name} placeholder={placeholder}
+                                    value={formData[name]}
+                                    onChange={handleChange}
+                                    className="input"/>
+                            </label>
+                        ))
+                    }
                         <label>
                             Patient Report (PDF)
                             <input type="file" accept=".pdf"
