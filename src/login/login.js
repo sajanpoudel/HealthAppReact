@@ -22,7 +22,6 @@ function Login() {
         // Add your signup logic here
         setIsLoggedIn(true);
     };
-    console.log("isLogin:", isLogin);
     if (isLoggedIn) {
         return <Dashboard />;
     }
