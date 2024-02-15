@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './login.css'; // Assuming that the CSS is in style.css in the same folder
+import './login.css';
 import HomeHeader from '../views/components/homeheader';
 import Dashboard from '../DashBoard/dashboard';
 function Login() {
@@ -13,13 +13,14 @@ function Login() {
     const toggleSignup = () => {
         setIsLogin(false);
     };
+
     const handleLogin = () => {
-        // Add your login logic here
+        // TODO: replace with a real login request
         setIsLoggedIn(true);
     };
 
     const handleSignup = () => {
-        // Add your signup logic here
+        // TODO: replace with a real signup request
         setIsLoggedIn(true);
     };
     if (isLoggedIn) {
