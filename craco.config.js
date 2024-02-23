@@ -1,5 +1,5 @@
 module.exports = {
-  reactScriptsVersion: "react-scripts",
+  reactScriptsVersion: 'react-scripts',
   style: {
     css: {
       loaderOptions: () => {
