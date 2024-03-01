@@ -1,24 +1,32 @@
-import React from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import React from 'react';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 import '../home.css';
 
 const NavBar = () => {
-    return (
-        <div id="navbar" className="nav-card">
-            <div className="menu-logo">
-                <div className="gg-menu-left "></div>
-                <h2>Navbar</h2>
-            </div>
-            <ul>
-                <li><Link to="/dashboard">Personal Analysis</Link></li>
-                <li><Link to="/hospital-reports">Hospital Reports</Link></li>
-                <li><Link to="/upload">Upload Reports</Link></li>
+  return (
+    <div id="navbar" className="nav-card">
+      <div className="menu-logo">
+        <div className="gg-menu-left "></div>
+        <h2>Navbar</h2>
+      </div>
+      <ul>
+        <li>
+          <Link to="/dashboard">Personal Analysis</Link>
+        </li>
+        <li>
+          <Link to="/hospital-reports">Hospital Reports</Link>
+        </li>
+        <li>
+          <Link to="/upload">Upload Reports</Link>
+        </li>
 
-                <li><a href="#cards">Health AI</a></li>
-            </ul>
-        </div>
-    );
+        <li>
+          <a href="#cards">Health AI</a>
+        </li>
+      </ul>
+    </div>
+  );
 };
 
 export default NavBar;
