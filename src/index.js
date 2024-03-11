@@ -1,19 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-} from 'react-router-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
-import './style.css'
-import Home from './views/home'
-import NotFound from './views/not-found'
-import Login from './login/login'
-import Upload from './DashBoard/Upload/upload'
-import Dashboard from './DashBoard/dashboard'
-import Hospital from './DashBoard/hospital'
+import './style.css';
+import Home from './views/home';
+import NotFound from './views/not-found';
+import Login from './login/login';
+import Upload from './DashBoard/Upload/upload';
+import Dashboard from './DashBoard/dashboard';
+import Hospital from './DashBoard/hospital';
 
 const App = () => {
   return (
@@ -28,7 +23,7 @@ const App = () => {
         <Redirect to="**" />
       </Switch>
     </Router>
-  )
-}
+  );
+};
 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(<App />, document.getElementById('app'));
