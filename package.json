@@ -21,7 +21,8 @@
     "start": "react-scripts start",
     "build": "craco build",
     "test": "craco test --env=jsdom",
-    "eject": "craco eject"
+    "eject": "craco eject",
+    "format": "prettier --write ."
   },
   "engines": {
     "node": "18.x"
